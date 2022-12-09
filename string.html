@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array</title>
+    <style>
+
+
+  body{
+    background-color: skyblue;
+
+}
+
+
+
+
+        .bg-container{
+
+            display: flex;
+            flex-direction: column;
+            margin-top: 10px;
+            margin-left: 70px;
+            border: 2px solid red;
+            background-color: pink;
+            justify-content: center;
+            align-items: center;
+            border-radius: 15px;
+            margin-right: 20px;
+        
+        }
+        .button_container{
+            padding: 20px 20px;
+            border: 2px solid blue;
+            border-radius: 10px;
+        }
+        
+
+    </style>
+</head>
+<body>
+   
+        
+  
+    </p>
+    <script >
+    
+        
+    let bgContainerEL=document.createElement("div");
+    bgContainerEL.classList.add("bg-container");
+    
+    document.body.appendChild(bgContainerEL);
+
+
+     let headingEL=document.createElement("h1");
+     headingEL.classList.add("heading");
+     headingEL.textContent="Grocery list";
+     headingEL.style.justifyContent="center";
+     bgContainerEL.appendChild(headingEL);
+
+
+
+
+     let listOfTimes=document.createElement("ul");
+     listOfTimes.style.backgroundColor="white";
+     listOfTimes.classList.add("list-container");
+     bgContainerEL.appendChild(listOfTimes);
+
+
+    let items=["milk","vegetables","noodles","suup","cup","coffee","water"];
+   
+    for(let elements of items){
+        
+    let orderList=document.createElement('li');
+    orderList.textContent=elements;
+    
+    listOfTimes.appendChild(orderList);
+
+    
+    }
+    let check=document.createElement("input");
+    check.type="checkbox";
+    check.id="my_checkbox";
+    bgContainerEL.appendChild(check);
+
+
+    let form=document.createElement("label");
+    form.setAttribute("for","my_checkbox");
+    form.textContent="order is placed";
+    bgContainerEL.appendChild(form);
+
+
+    let buttonEl=document.createElement("button");
+    buttonEl.textContent="proceed to pay";
+    buttonEl.style.backgroundColor="blue";
+    buttonEl.classList.add("button_container");
+    bgContainerEL.appendChild(buttonEl);
+    
+     
+     
+
+
+
+
+
+
+    </script>
+    
+
+    
+</body>
+</html>
